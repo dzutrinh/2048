@@ -12,5 +12,13 @@
 ## v1.0: 
  * Initial development.
 
+## Compiler
+ * Turbo/Borland Pascal (no CRT needed)
+ * TMT Pascal
+ * Free Pascal
+
+## Build:
+make -fmakefile
+
 ## Screenshot:
 ![Screenshot](https://github.com/dzutrinh/2048/blob/master/2048.png)
