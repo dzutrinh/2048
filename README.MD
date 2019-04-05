@@ -13,4 +13,4 @@
  * Initial development.
 
 ## Screenshot:
-!(https://github.com/dzutrinh/2048/blob/master/2048.png)
+! [Screenshot] (https://github.com/dzutrinh/2048/blob/master/2048.png)
