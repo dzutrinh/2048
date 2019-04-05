@@ -8,10 +8,10 @@
  (c) 2019 by Inifinity Group
    THIS GAME IS A FREEWARE
 
-## What's new:
+# What's new:
 ===========
 
-# v1.1: 
+## v1.1: 
  - ANSI-Art background added.
  - UI added.
  - Hi-score counter added.
@@ -19,5 +19,8 @@
  - Game will auto-save when quit.
  - User can now restart the game.
 
-# v1.0: 
+## v1.0: 
  - Initial development.
+
+## Screenshot:
+===========
