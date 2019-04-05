@@ -20,5 +20,8 @@
 ## Build:
 make -fmakefile
 
+## Binaries:
+Latest binaries pre-compiled using Turbo Pascal, TMT Pascal and Free Pascal can be downloaded [here](https://github.com/dzutrinh/2048/releases/latest). Require DOSBox to run.
+
 ## Screenshot:
 ![Screenshot](https://github.com/dzutrinh/2048/blob/master/2048.png)
