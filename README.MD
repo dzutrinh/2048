@@ -1,7 +1,7 @@
 # The infamous 2048 game
 
-# What's new:
-## v1.1: 
+## What's new:
+ <b>v1.1:</b>
  * ANSI-Art background added.
  * UI added.
  * Hi-score counter added.
@@ -9,7 +9,7 @@
  * Game will auto-save when quit.
  * User can now restart the game.
 
-## v1.0: 
+ <b>v1.0:</b>
  * Initial development.
 
 ## Compiler
