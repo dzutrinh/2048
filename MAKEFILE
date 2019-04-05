@@ -1,0 +1,30 @@
+#
+# Makefile for '2048' game
+#
+
+PROJECT=2048
+SOURCE=$(PROJECT).pas
+BINARY=$(PROJECT).exe
+INCLUDE=game.inc \
+	globals.inc \
+	engine.inc \
+	helpers.inc \
+	logo.inc
+RM=erase
+
+# Compiler: Turbo Pascal=TPC; Free Pascal=FPC; TMT Pascal=TMTPC
+PC=tpc		
+
+all:	$(BINARY)
+	
+$(BINARY): $(SOURCE) $(INCLUDE)
+	@$(PC) $(SOURCE)
+	@if exist $(PROJECT).o   $(RM) $(PROJECT).o
+	@if exist $(PROJECT).fpd $(RM) $(PROJECT).fpd
+	@if exist $(PROJECT).sym $(RM) $(PROJECT).sym
+
+clean:	
+	@if exist $(PROJECT).exe $(RM) $(PROJECT).exe
+	@if exist $(PROJECT).fpd $(RM) $(PROJECT).fpd
+	@if exist $(PROJECT).sym $(RM) $(PROJECT).sym
+	@if exist $(PROJECT).o   $(RM) $(PROJECT).o

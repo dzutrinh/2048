@@ -1,0 +1,23 @@
+ ______ ______ _____  ______ 
+|__    |      |  |  ||  __  |
+|    __|  --  |__    |  __  |
+|______|______|  |__||______|
+
+        The game 2048
+  Code by Trinh D.D. Nguyen
+ (c) 2019 by Inifinity Group
+   THIS GAME IS A FREEWARE
+
+## What's new:
+===========
+
+# v1.1: 
+ - ANSI-Art background added.
+ - UI added.
+ - Hi-score counter added.
+ - Move counter added.
+ - Game will auto-save when quit.
+ - User can now restart the game.
+
+# v1.0: 
+ - Initial development.
