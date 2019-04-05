@@ -1,12 +1,12 @@
- ______ ______ _____  ______ 
-|__    |      |  |  ||  __  |
-|    __|  --  |__    |  __  |
-|______|______|  |__||______|
+ ______ ______ _____  ______ <br />
+|__    |      |  |  ||  __  |<br />
+|    __|  --  |__    |  __  |<br />
+|______|______|  |__||______|<br />
 
-        The game 2048
-  Code by Trinh D.D. Nguyen
- (c) 2019 by Inifinity Group
-   THIS GAME IS A FREEWARE
+        The game 2048        <br />
+  Code by Trinh D.D. Nguyen  <br />
+ (c) 2019 by Inifinity Group <br />
+   THIS GAME IS A FREEWARE   <br />
 
 # What's new:
 ===========
