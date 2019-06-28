@@ -16,7 +16,8 @@ type    TILE_TYPE	= longint;
 	VEC4_TYPE    	= array[0..BOARD_DIM-1] of TILE_TYPE;
 	BOARD_TYPE	= array[0..BOARD_DIM-1] of VEC4_TYPE;
 
-const	GAME_SCORE   	: longint = 0;
+const   GAME_WINCOND	: longint = 11;
+	GAME_SCORE   	: longint = 0;
 	GAME_HISCORE	: longint = 500;
 	GAME_MOVES	: longint = 0;
 	FILE_SCORE	: string[13] = 'HISCORE.DAT';
@@ -45,6 +46,8 @@ procedure	stateInit(var board: BOARD_TYPE);				forward;
 procedure	stateRestart(var board: BOARD_TYPE);				forward;
 function        stateSave(var board: BOARD_TYPE): boolean;			forward;
 function        stateLoad(var board: BOARD_TYPE): boolean;			forward;
+function        stateCheckOver(board: BOARD_TYPE): boolean;			forward;
+function	stateCheckWin(board: BOARD_TYPE): boolean;			forward;
 
 function        scoreLoad: boolean;						forward;
 function	scoreSave: boolean;						forward;
@@ -290,6 +293,19 @@ begin
 	boardRotate(board);
 	boardRotate(board);
 	stateCheckOver := ended;
+end;
+
+function	stateCheckWin(board: BOARD_TYPE): boolean;
+var     x, y, c	: longint;
+begin
+	for x := 0 to BOARD_DIM-1 do
+	for y := 0 to BOARD_DIM-1 do
+		if board[x, y] = GAME_WINCOND then
+		begin
+			stateCheckWin := TRUE;
+			exit;
+		end;
+	stateCheckWin := FALSE;
 end;
 
 { Puts the game into initial state }

@@ -11,6 +11,9 @@
 # What's new:
 ===========
 
+## v1.2: 
+ - Win condition added.
+
 ## v1.1: 
  - ANSI-Art background added.
  - UI added.
@@ -22,5 +25,3 @@
 ## v1.0: 
  - Initial development.
 
-## Screenshot:
-===========

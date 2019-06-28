@@ -116,12 +116,12 @@ begin
 		v := st[i];
 		if v = '~' then
 		begin
-			inc(i); v := st[i];
+			inc(i); v := upcase(st[i]);
 			case v of
 			'0'..'9': bk := ord(v)-48;
 			'A'..'F': bk := ord(v)-55;
 			end;
-			inc(i); v := st[i];
+			inc(i); v := upcase(st[i]);
 			case v of
 			'0'..'9': fg := ord(v)-48;
 			'A'..'F': fg := ord(v)-55;

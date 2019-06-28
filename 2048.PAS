@@ -3,15 +3,15 @@
 {   2048.PAS                                                                 }
 {   --------                                                                 }
 {   2048 Game for DOS                                                        }
-{   Version 1.0                                                              }
+{   Version 1.2                                                              }
 {   Coded by Trinh D.D. Nguyen                                               }
 {   Copyrights (c) 2019 by Infinity Group                                    }
 {                                                                            }
 {   Compilers                                                                }
 {   ---------                                                                }
-{   . Turbo/Borland Pascal 7.0 (16-bit)                                      }
-{   . TMT Pascal 3.5+ (32-bit)                                               }
-{   . Free Pascal 1.0.1+ (GO32)                                              }
+{   . Turbo/Borland Pascal 6.0+                                              }
+{   . TMT Pascal 3.5+                                                        }
+{   . Free Pascal 1.0.1+                                                     }
 {                                                                            }
 {   Tools used                                                               }
 {   ----------                                                               }
@@ -28,7 +28,7 @@
 {$i game.inc}			{ game handlers               }
 
 begin
-	gameInit;		{ init game }
+	gameInit(1, 2, '0628');	{ init game }
 	if gameDemo then	{ playing a so-called demo }
 		gamePlay;	{ game loop }
 	gameDone;		{ shutdown game }

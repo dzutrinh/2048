@@ -4,14 +4,14 @@
 { ////////////////////////////////////////////////////////////////////////// }
 
 { exposed API }
-procedure       gameInit;		forward;
-procedure	gameDone;		forward;
-function        gameDemo: boolean;	forward;
-procedure       gamePlay;		forward;
+procedure       gameInit(major, minor: longint; build: string);		forward;
+procedure	gameDone;						forward;
+function        gameDemo: boolean;					forward;
+procedure       gamePlay;						forward;
 
 { private API }
-procedure	gameLogo;		forward;
-procedure       gameUpdate;		forward;
+procedure	gameLogo;						forward;
+procedure       gameUpdate;						forward;
 
 { ////////////////////////////////////////////////////////////////////////// }
 
@@ -24,8 +24,11 @@ const
 var
 	board	: BOARD_TYPE;
 
-procedure       gameInit;
+procedure       gameInit(major, minor: longint; build: string);
 begin
+	GAME_VERSION := major shl 8 + minor;
+	GAME_BUILD   := build;
+
 	textmode(CO80);
 	randomize;
 
@@ -54,7 +57,7 @@ procedure	gameLogo;
 var     x       : longint;
 begin
 	for x := 0 to 3999 do MEM[VIDEO_SEG:x] := ord(IMAGEDATA[x+1]);
-	prints(72, 25, $01, 'v' + ltoa(hi(GAME_VERSION)) + '.' +
+	prints(71, 25, $01, 'v' + ltoa(hi(GAME_VERSION)) + '.' +
 				 ltoa(lo(GAME_VERSION)) + '.' +
 				 GAME_BUILD);
 end;
@@ -133,6 +136,13 @@ begin
 			inc(GAME_MOVES);
 			boardPlace(board);
 			boardShow(board);
+			if stateCheckWin(board) then
+			begin
+				info('~02!! ~0AYOU WIN ~02!!');
+				stateRestart(board);
+				next := FALSE;
+			end
+			else
 			if stateCheckOver(board) then
 			begin
 				info('~06!! ~0EGAME OVER~06 !!');
