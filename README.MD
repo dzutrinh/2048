@@ -1,4 +1,4 @@
-# The infamous 2048 game
+# Another clone of the 2048 game
 
 ## What's new:
  <b>v1.1:</b>
