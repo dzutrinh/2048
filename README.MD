@@ -1,6 +1,6 @@
 # Another clone of the 2048 game
 
-IMPORTANT: Updated version of this game is now at: https://github.com/dzutrinh/TMGDL, Free Pascal support is removed and I have no plan to put it back. This repo will no longer receive any further update.
+IMPORTANT: Updated version of this game is now available at: https://github.com/dzutrinh/TMGDL, Free Pascal support is removed and I have no plan to put it back. This repo will no longer receive any further update.
 
 ## What's new:
  <b>v1.1:</b>
